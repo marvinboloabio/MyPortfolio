@@ -459,9 +459,6 @@
                         <a class="nav-link" href="#portfolio">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#testimonials">Testimonials</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                     <li class="nav-item">
@@ -585,30 +582,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="section">
-        <h2>Testimonials</h2>
-        <div class="testimonial-carousel">
-            <div class="testimonial" id="testimonial1">
-                <p>"Great experience working with [Your Name]! Highly recommend for any web development needs."</p>
-                <p><strong>Client Name</strong></p>
-            </div>
-            <div class="testimonial" id="testimonial2">
-                <p>"Professional and efficient. My website looks amazing and performs excellently."</p>
-                <p><strong>Client Name</strong></p>
-            </div>
-            <div class="testimonial" id="testimonial3">
-                <p>"Excellent work on our SEO! We saw immediate results and increased traffic."</p>
-                <p><strong>Client Name</strong></p>
-            </div>
-            <div class="controls">
-                <button id="prev"><i class="fas fa-chevron-left"></i></button>
-                <button id="next"><i class="fas fa-chevron-right"></i></button>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
     <!-- Footer -->
     <footer>
@@ -631,31 +604,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        // Testimonial Carousel
-        let currentTestimonial = 1;
-        const testimonials = document.querySelectorAll('.testimonial');
-        const totalTestimonials = testimonials.length;
-
-        function showTestimonial(index) {
-            testimonials.forEach((testimonial, i) => {
-                testimonial.style.display = (i + 1 === index) ? 'block' : 'none';
-            });
-        }
-
-        document.getElementById('next').addEventListener('click', function () {
-            currentTestimonial = (currentTestimonial % totalTestimonials) + 1;
-            showTestimonial(currentTestimonial);
-        });
-
-        document.getElementById('prev').addEventListener('click', function () {
-            currentTestimonial = (currentTestimonial - 2 + totalTestimonials) % totalTestimonials + 1;
-            showTestimonial(currentTestimonial);
-        });
-
-        // Initialize carousel
-        showTestimonial(currentTestimonial);
-    </script>
 </body>
 
 </html>
